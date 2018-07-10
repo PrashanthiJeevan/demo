@@ -2,7 +2,6 @@ var right = document.getElementById("right").value;
 var left = document.getElementById("left").value;
 var f1;
 var f2;
-
 function fwdtemp() {
    left =  document.getElementById("left").value;
    right =  document.getElementById("right").value;
