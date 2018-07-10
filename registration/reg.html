@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Registration page</h1></br>
+    <div>
+        <input id="fn" type="text" onchange="firstname()" placeholder="First Name" />
+        <p hidden id="a1" style="color:red">Please enter the first name </p>
+    </div>
+    <div>
+        <input id="ln" type="text" onchange="lastname()" placeholder="Last Name" />
+        <p hidden id="a2" style="color:red">Please enter the last name </p>
+    </div>
+
+    <div>
+        <input type="text" id="em" onchange="email()" placeholder="Email" />
+        <p hidden id="a3" style="color:red">Please enter the email </p>
+    </div>
+    <div>
+        <input id="pw" type="password" onchange="password()" placeholder="Password" />
+        Enter minimum of 8 characters.
+        <p hidden id="a4" style="color:red">Please enter the password </p>
+    </div>
+    <div>
+        <input type="text" id="loc" onchange="loctn()" placeholder="Location" />
+        <p hidden id="a5" style="color:red">Please enter the location </p>
+    </div>
+    <div>
+        <input type="text" id="comp" onchange="compny()" placeholder="Company" />
+        <p hidden id="a6" style="color:red">Please enter the company name </p>
+    </div>
+    <div>
+        Gender
+        <input id="male" type="radio" name="gender" onchange="gend()" /> male
+        <input type="radio" id="female" name="gender" onchange="gend()" /> female
+        <p hidden id="a7" style="color:red">Please select a gender </p>
+    </div>
+    <button onclick="reg()">Register</button>
+    <div id="table">
+
+    </div>
+
+    <button onclick="table1()">view data</button>
+<script src="reg.js"></script>
+</body>
+</html>

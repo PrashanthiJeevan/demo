@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.js"
+            integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+            crossorigin="anonymous"></script>
+    <style>
+body{
+    height: 500px;
+}
+        button{
+            border : 1px;
+        }
+        table, tr, td {
+            border: 1px;
+            color: #000;
+        }
+        div{
+            text-align:center;
+            border:1px solid black;
+        }
+        p{
+            color:darkblue;
+            background-color:antiquewhite;
+        }
+        #comnts{
+            color:red;
+            border:1px solid red;
+        }
+    </style>
+
+</head>
+<body onscroll="scroll1()" >
+
+    <div >
+
+    <button onclick="run();">Store</button>
+    <h3> User Details: </h3>
+    <button onclick="viewdet();">View Details</button>
+    <div>
+        <table id="user_name" border="1"> </table>
+
+    </div>
+
+</div>
+    <script src="exam.js"></script>
+    <script src="edit.js"></script>
+</body>
+
+</html>

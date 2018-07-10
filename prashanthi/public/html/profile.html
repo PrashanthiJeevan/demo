@@ -1,0 +1,85 @@
+<div ng-init="prof()" >
+
+
+    <h1>Hi {{profile[0].name}}</h1>   <br />
+    Click here to view history<br />
+    <button class="btn btn-primary" ng-click="applied(profile[0].name)">show jobs</button><br/>
+<table  >
+    <th>flagged</th>
+    <tr ng-repeat="as in show_applied_saved">
+        
+        <td>
+            {{as.flag_descrip}}
+        </td>
+    </tr>
+    <th>applied</th>
+    <tr ng-repeat="as in show_applied_saved">
+        
+        <td>
+            {{as.apply_descrip}}
+        </td>
+    </tr>
+</table>
+    
+  <br /><br /> <button class="btn btn-primary" ng-show='profile[0].type=="company"' ng-click="post()">Post a job</button><br />
+    <button class="btn btn-primary"  ng-hide='profile[0].type=="company"'   ng-click="search()">Search jobs</button>
+
+   
+
+
+<div hidden id="b">
+    <h1>You can post a job here!</h1>
+    <p>Choose your job type:</p>
+    <select class="form-control" id="job_title">
+        <option value="software">Software</option>
+        <option value="hardware">Hardware</option>
+        <option value="medical">Medical</option>
+        <option value="Mathematics">Mathematics</option>
+    </select><br /><br />
+    <p>Enter your job description:</p>
+    <input class="form-control" type="text" id="desc" /><br />
+    <p>Type any keyword</p>
+    <input class="form-control" type="text" id="key" /><br />
+    <p>Location you would prefer:</p>
+    <input class="form-control" type="text" id="locat" /><br /><br />
+
+    <button class="btn btn-primary" ng-click="save()">Post </button>
+</div>
+<div hidden id='lol'><h1>You have posted a job</h1></div>
+
+<div hidden id="a">
+    <h1>You can search for a job here!</h1>
+   
+
+    <table class="table table-default table-hover" border=1>
+        <tr ng-repeat="x in search1|filter:search_filter1|filter:search_filter2|filter:search_filter3">
+        <td>{{x.jobtitle}}</td> 
+        <td>{{x.description}}</td>
+        <td>{{x.keyword}}</td>
+        <td>{{x.location}}</td>
+        <td><button class="btn btn-success" ng-click="apply(x.description,profile[0].name)">apply</button></td>
+        <td><button class="btn btn-success"  ng-click="flag(x.description,profile[0].name)">flag</button></td></tr>
+            </table>
+        
+
+    <p>Enter the title:</p>
+    <input class="form-control" type="text" ng-model="search_filter1" placeholder="search by title" id="title" />
+    <p>Enter the keyword:</p>
+    <input class="form-control" type="text" ng-model="search_filter2" placeholder="search by keyword" id="keys" /><br />
+    <p>Enter the location you would prefer:</p>
+    <input class="form-control" type="text" ng-model="search_filter3" placeholder="search by location" id="loctn" /><br /><br />
+
+    <button class="btn btn-primary"  hidden ng-click="searchjobs()">Search</button><br /><br />
+
+
+
+
+</div> </div>
+
+<br/><br>
+<!-- <button class="btn btn-success"  ng-click="reset()">Reset</button><br/><br/> -->
+   
+    <button class="btn btn-danger" ng-click="logout()">Logout</button>
+
+
+</div>

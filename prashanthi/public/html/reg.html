@@ -1,0 +1,22 @@
+<div style="text-align: center;">
+  
+    <h1>Welcome to the registration page</h1>
+    <p>Enter you name:</p>
+    
+    <input class="form-control" type="text" placeholder="username" id="username" required/>
+    <p>Enter you password:</p>
+    <input type="password" class="form-control" placeholder="minimum 8 digits" id ="pass" required/>
+    <p>Enter you email ID:</p>
+    <input type="email" class="form-control" placeholder="email ID" id="email" />
+    <p>Enter you location:</p>
+    <input type="text" class="form-control" placeholder="location" id ="loc" />
+    <p>Enter you Phone number:</p>
+    <input type="number" class="form-control" placeholder="mobile/landline" id ="phone" /><br /><br />
+    User type:
+    <select class="form-control" id="user_type">
+        <option value="company">Company</option>
+        <option value="job seeker">Jobseeker</option>
+    </select><br /><br />
+    <button class="btn btn-primary" ng-click="register()">Register!</button>
+
+</div>
